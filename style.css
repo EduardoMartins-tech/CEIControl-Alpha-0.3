@@ -1,233 +1,1228 @@
-/* Reset e base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+/* ============================================================
+   VARIÁVEIS E ESTILOS GLOBAIS
+   ============================================================ */
+/* No topo do style.css */
+:root {
+    --bg-body: #f8fafb;
+    --bg-card: #ffffff;
+    --text-main: #1a202c;
+    --text-sub: #718096;
+    --border-color: #edf2f7;
 }
 
-body {
-  background-color: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
+/* Quando o JS adiciona a classe .dark-mode ao body */
+body.dark-mode {
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e2e8f0;
+    --text-sub: #a0aec0;
+    --border-color: #333;
 }
 
-/* Navbar */
-header {
-  background-color: #222;
-  color: white;
-  padding: 20px;
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
-nav {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body { 
+    color: var(--text-dark); 
+    line-height: 1.6; 
+    background-color: var(--white);
+    scroll-behavior: smooth;
 }
 
-nav h1 {
-  font-size: 1.5rem;
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 40px; 
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+/* ============================================================
+   HEADER E NAVEGAÇÃO
+   ============================================================ */
+.navbar { 
+    background: #fff; 
+    padding: 12px 0; 
+    border-bottom: 1px solid #eee; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
+.flex-nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
-/* Botões da Navbar */
-.nav-buttons {
-  display: flex;
-  gap: 10px;
+.logo-area { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    text-decoration: none !important;
 }
 
-.nav-buttons a {
-  text-decoration: none;
+.logo-circle { 
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 1px solid #ddd; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
-/* Botão principal */
-.btn {
-  background-color: #00796b;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+.logo-circle img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
 }
 
-.btn:hover {
-  background-color: #004d40;
+.logo-text { 
+    font-weight: 800; 
+    font-size: 1.25rem; 
+    color: var(--primary-green) !important; 
+    letter-spacing: -0.5px;
 }
 
-/* Botão secundário */
-.btn-secundario {
-  background-color: transparent;
-  border: 2px solid #00796b;
-  color: #00796b;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: all 0.3s ease;
+.main-nav { 
+    display: flex; 
+    align-items: center; 
 }
 
-.btn-secundario:hover {
-  background-color: #00796b;
-  color: white;
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 25px; 
+    margin-right: 30px; 
 }
 
-/* Hero Section */
-#hero {
-  background-color: #00695c;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--text-muted); 
+    font-weight: 500; 
+    transition: 0.3s; 
 }
 
-#hero h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.nav-links a:hover { 
+    color: var(--primary-green); 
 }
 
-#hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+/* Botões de Auth no Header */
+.nav-auth { display: flex; gap: 10px; }
+
+.btn-cadastre { 
+    background: var(--light-green); 
+    color: #fff; 
+    padding: 8px 18px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 0.9rem; 
 }
 
-#hero a {
-  background-color: #004d40;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 5px;
+.btn-login { 
+    border: 1px solid #444; 
+    color: #444; 
+    padding: 8px 18px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 0.9rem; 
 }
 
-#hero a:hover {
-  background-color: #003d33;
+/* ============================================================
+   HOME - HERO E CARROSSEL
+   ============================================================ */
+.hero-green { 
+    background: var(--primary-green); 
+    color: white; 
+    padding: 80px 0; 
+    min-height: 550px; 
 }
 
-/* Funcionalidades */
-#funcionalidades {
-  padding: 60px 20px;
-  text-align: center;
+.hero-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px; 
+    align-items: center; 
 }
 
-#funcionalidades h2 {
-  margin-bottom: 40px;
+.hero-text h1 { 
+    font-size: 2.8rem; 
+    margin-bottom: 20px; 
+    min-height: 120px; 
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: auto;
+.hero-text p { 
+    font-size: 1.15rem; 
+    margin-bottom: 30px; 
+    opacity: 0.9; 
 }
 
-.grid div {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.hero-visual { 
+    position: relative; 
+    height: 380px; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
 }
 
-/* Missão */
-#sobre {
-  background-color: #eeeeee;
-  padding: 60px 20px;
-  text-align: center;
+.c-img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    position: absolute; 
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
 }
 
-#sobre a {
-  display: inline-block;
-  margin-top: 20px;
-  background-color: #00796b;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
+.c-img.active { opacity: 1; }
+
+.carousel-item { 
+    display: none; 
+    animation: fadeIn 0.8s; 
 }
 
-#sobre a:hover {
-  background-color: #00695c;
+.carousel-item.active { display: block; }
+
+@keyframes fadeIn { 
+    from { opacity: 0; } 
+    to { opacity: 1; } 
 }
 
-/* ODS */
-#ods {
-  padding: 60px 20px;
-  background-color: #f1f1f1;
-  text-align: center;
+.btn-black { 
+    background: #000; 
+    color: #fff; 
+    padding: 14px 40px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: 0.3s; 
+    display: inline-block;
+    border: none;
+    cursor: pointer;
 }
 
-#ods ul {
-  list-style-type: none;
-  padding: 20px 0;
+.btn-black:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
 }
 
-#ods li {
-  margin: 10px 0;
-  font-weight: 500;
+/* ============================================================
+   HOME - FUNCIONALIDADES E CONTATO
+   ============================================================ */
+.features-white { padding: 80px 0; }
+
+.section-title { 
+    text-align: center; 
+    margin-bottom: 50px; 
+    font-size: 2.2rem; 
 }
 
-/* Contato */
-#contato {
-  padding: 60px 20px;
-  background-color: white;
-  text-align: center;
+.features-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 40px; 
 }
 
-form {
-  max-width: 500px;
-  margin: auto;
-  text-align: left;
+.feature-item { 
+    text-align: center; 
+    padding: 20px; 
 }
 
-form input,
-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.icon-box { 
+    font-size: 3rem; 
+    margin-bottom: 15px; 
+    display: block; 
 }
 
-form button {
-  background-color: #00796b;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+.contact-section { 
+    padding: 80px 0; 
+    background: var(--gray-bg); 
 }
 
-form button:hover {
-  background-color: #004d40;
+.contact-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 60px; 
 }
 
-/* Rodapé */
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
+.contact-form { 
+    background: #fff; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
 }
 
-footer nav a {
-  color: #ccc;
-  text-decoration: none;
-  margin: 0 10px;
+.contact-form input, .contact-form textarea { 
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
 }
 
-footer nav a:hover {
-  text-decoration: underline;
+/* ============================================================
+   PÁGINA SOBRE - MVV E ODS
+   ============================================================ */
+.about-hero {
+    background: var(--primary-green);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
 }
+
+.mvv-section { padding: 80px 0; background: #fff; }
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: -50px;
+}
+
+.mvv-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.mvv-card h3 { color: var(--primary-green); margin-bottom: 10px; }
+
+/* ODS Melhores Visuais */
+.ods-section-page { padding: 100px 0; background: #f9f9f9; }
+
+.ods-detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.ods-card-item {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+}
+
+.ods-img-container {
+    width: 120px; 
+    height: 120px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ods-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ============================================================
+   TELA DE LOGIN (form_login.php)
+   ============================================================ */
+.bg-auth {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+.auth-header { margin-bottom: 50px; }
+.auth-header .logo-text { 
+    color: #000 !important; 
+    font-size: 1.8rem; 
+}
+
+.auth-card h2 { font-size: 1.5rem; margin-bottom: 10px; }
+.auth-card .subtitle { color: var(--text-muted); margin-bottom: 30px; }
+
+.auth-form { text-align: left; }
+
+.auth-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.auth-form input, .auth-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    outline-color: var(--primary-green);
+}
+
+.btn-black-full {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.divider {
+    margin: 25px 0;
+    position: relative;
+    border-top: 1px solid #eee;
+}
+
+.divider span {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 0 15px;
+    color: #999;
+}
+
+.btn-google {
+    width: 100%;
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.error-msg {
+    background-color: #fee2e2;
+    color: var(--error-red);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    border: 1px solid #fecaca;
+}
+/* Efeito de foco interativo nos campos de Login */
+.auth-form input:focus, 
+.auth-form select:focus {
+    border-color: var(--light-green); /* Muda a borda para o verde claro */
+    box-shadow: 0 0 0 4px rgba(0, 169, 143, 0.1); /* Cria uma "aura" suave em volta */
+    outline: none; /* Tira aquela borda azul padrão feia do navegador */
+    transition: 0.3s;
+}
+
+/* ============================================================
+   VARIÁVEIS E ESTILOS GLOBAIS
+   ============================================================ */
+:root {
+    --primary-green: #004d40;
+    --light-green: #00a98f;
+    --white: #ffffff;
+    --text-dark: #333;
+    --text-muted: #666;
+    --error-red: #dc2626;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+}
+
+/* ============================================================
+   ESTRUTURA SPLIT SCREEN (LOGIN)
+   ============================================================ */
+
+.bg-auth {
+    background-color: var(--white);
+    min-height: 100vh;
+    display: flex;
+}
+
+.auth-split-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* --- LADO ESQUERDO: FORMULÁRIO --- */
+.auth-side-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: var(--white);
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-header {
+    margin-bottom: 40px;
+}
+
+.auth-header .logo-text {
+    color: #000 !important;
+    text-decoration: none !important;
+    font-size: 1.8rem;
+    font-weight: 800;
+    display: block;
+}
+
+/* Estilo para imagem de logo no topo (se houver) */
+.auth-header-logo {
+    height: 50px;
+    margin-bottom: 10px;
+    filter: none !important; /* Garante cor original no fundo branco */
+}
+
+.auth-card h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.auth-card .subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* --- FORMULÁRIO --- */
+.auth-form {
+    text-align: left;
+}
+
+.auth-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.auth-form input, 
+.auth-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* Feedback visual de foco */
+.auth-form input:focus, 
+.auth-form select:focus {
+    border-color: var(--light-green);
+    box-shadow: 0 0 0 4px rgba(0, 169, 143, 0.1);
+    outline: none;
+}
+
+.btn-black-full {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-black-full:hover {
+    background: #333;
+}
+
+.error-msg {
+    background-color: #fee2e2;
+    color: var(--error-red);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    border: 1px solid #fecaca;
+    text-align: center;
+}
+
+.auth-footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.auth-footer a {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* --- LADO DIREITO: PAINEL VISUAL (VERDE) --- */
+.auth-side-visual {
+    flex: 1.2;
+    background-color: var(--primary-green) !important;
+    background-image: none !important; /* Mata a marca d'água */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    padding: 80px;
+    position: relative;
+}
+
+.visual-content {
+    max-width: 500px;
+}
+
+.visual-content h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.visual-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* --- FOOTER COM LOGOS (FATEC E JEMTECH) --- */
+.visual-footer {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-logo {
+    height: 45px;
+    width: auto;
+    /* Filtro mágico que deixa JPG/PNG brancos no fundo verde */
+    filter: brightness(0) invert(1); 
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}
+
+.footer-text {
+    border-left: 1px solid rgba(255,255,255,0.3);
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 950px) {
+    .auth-side-visual {
+        display: none; /* Esconde o lado verde em telas pequenas */
+    }
+}
+
+/* ... (resto dos estilos do card e form permanecem iguais) ... */
+/* ============================================================
+   FOOTER GERAL
+   ============================================================ */
+.footer-simple { 
+    padding: 40px 0; 
+    text-align: center; 
+    color: var(--text-muted); 
+    border-top: 1px solid #eee; 
+}
+
+/* ============================================================
+   PAINEL ADMINISTRATIVO (DASHBOARD)
+   ============================================================ */
+
+.dashboard-body {
+    background-color: var(--bg-body) !important; /* Use o !important se o erro persistir */
+    color: var(--text-main);
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 260px;
+    background: var(--bg-card);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    transition: background 0.3s, border 0.3s;
+}
+
+.sidebar-logo {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f4f8;
+}
+
+.nav-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #a0aec0;
+    margin: 25px 0 10px 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #4a5568;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    transition: 0.3s;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    background: #e6f4f1;
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.logout-link:hover {
+    background: #fff5f5 !important;
+    color: #e53e3e !important;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Isso garante que o botão fique alinhado com o meio do texto */
+    padding: 20px 45px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+}
+.header-welcome h1 {
+    font-size: 1.4rem;
+    color: #1a202c;
+}
+
+.header-welcome p {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.header-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-green);
+}
+
+.content-wrapper {
+    padding: 45px;
+}
+
+.welcome-banner {
+    margin-bottom: 35px;
+}
+
+/* --- GRID E CARDS --- */
+.grid-funcionalidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.admin-card {
+    background: var(--bg-card); 
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color); 
+    color: var(--text-main); 
+    transition: all 0.3s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: var(--light-green);
+}
+
+.admin-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    background: #f0f9f7;
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+.card-info h3 {
+    font-size: 1.15rem;
+    color: #2d3748;
+    margin-bottom: 6px;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 20px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #475569;
+    transition: 0.2s;
+}
+
+.btn-sm.primary {
+    background: #000;
+    color: #fff;
+}
+
+.btn-sm.primary:hover {
+    background: #333;
+}
+
+.btn-sm:not(.primary):hover {
+    background: #e2e8f0;
+}
+/* ============================================================
+   PAINEL DO CLIENTE / RESPONSÁVEL
+   ============================================================ */
+
+/* Reutiliza a base do Dashboard Body e Container do Admin */
+
+/* --- SIDEBAR CLIENTE --- */
+/* (Herda os estilos básicos da sidebar, mas com toques específicos) */
+
+.sidebar-nav a.active-client {
+    background: var(--bg-body);
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+body.dark-mode .sidebar-nav a.active-client {
+    background: #2d3748; /* Um cinza levemente mais claro que o fundo do card escuro */
+    color: #4fd1c5; /* Um verde água que brilha melhor no escuro */
+}
+
+/* --- HEADER CLIENTE --- */
+.header-profile-client img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--light-green); /* Verde mais claro para o cliente */
+}
+
+/* --- CARDS DO CLIENTE --- */
+/* Usamos a grid de funcionalidades já definida, mas ajustamos os ícones */
+
+.client-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #edf2f7;
+    transition: all 0.3s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: var(--light-green);
+}
+
+.client-icon {
+    font-size: 1.8rem;
+    color: var(--light-green); /* Diferencial visual do Admin */
+    background: #e6f4f1;
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+/* --- LISTAS E TABELAS (Caso use no futuro) --- */
+.client-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.client-table th {
+    background: #f8fafb;
+    padding: 15px;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #718096;
+    text-transform: uppercase;
+}
+
+.client-table td {
+    padding: 15px;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 0.95rem;
+}
+
+/* --- ESTILOS ADICIONAIS DE BOTÕES PARA O CLIENTE --- */
+.btn-client-primary {
+    background-color: var(--light-green);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-client-primary:hover {
+    background-color: var(--primary-green);
+    transform: scale(1.02);
+}
+
+/* --- RESPONSIVIDADE CLIENTE --- */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 20px;
+    }
+    
+    .grid-funcionalidades {
+        grid-template-columns: 1fr; /* Uma coluna no mobile */
+    }
+}
+
+/* ============================================================
+   PAINEL DO EDUCADOR / PROFESSOR (painel_usuario.php)
+   ============================================================ */
+
+/* Nota técnica: Este painel reutiliza a estrutura .dashboard-container 
+   e .sidebar já definida nas seções anteriores. 
+*/
+
+/* --- CORES DE IDENTIDADE DO EDUCADOR --- */
+:root {
+    --educator-blue: #4a90e2;
+    --educator-bg-blue: #ebf4ff;
+}
+
+/* --- SIDEBAR - AJUSTE PARA O EDUCADOR --- */
+.sidebar-nav a.active-educator {
+    background: var(--educator-bg-blue);
+    color: var(--educator-blue);
+    font-weight: 600;
+}
+
+/* --- HEADER - AVATAR DO PROFESSOR --- */
+.header-profile-educator img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--educator-blue);
+}
+
+/* --- CARDS ESPECÍFICOS DO PROFESSOR --- */
+/* Reutilizamos a classe .admin-card, mas com variações de cores 
+   para os ícones do Educador.
+*/
+
+.educator-card-icon {
+    font-size: 1.8rem;
+    color: var(--educator-blue);
+    background: var(--educator-bg-blue);
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+/* Efeito de hover nos botões de ação do professor */
+.btn-educator {
+    background-color: var(--educator-blue);
+    color: white !important;
+}
+
+.btn-educator:hover {
+    background-color: #357abd;
+}
+
+/* --- ESTILO PARA O CARD DE "MATERIAIS" --- */
+/* (Aquele que ocupa a largura toda no painel do educador) */
+
+.full-width-card {
+    grid-column: 1 / -1;
+    background: #ffffff;
+    border: 1px dashed #cbd5e0; /* Diferencial visual para cards informativos */
+}
+
+/* --- RESPONSIVIDADE PARA O PAINEL DO EDUCADOR --- */
+@media (max-width: 900px) {
+    .educator-card-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .visual-content h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ============================================================
+   FIM DA SEÇÃO DO EDUCADOR
+   ============================================================ */
+
+   /* ============================================================
+   ESTILIZAÇÃO DE TABELAS (LISTAGENS)
+   ============================================================ */
+
+.table-container {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #edf2f7;
+    overflow-x: auto;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.custom-table thead tr {
+    border-bottom: 2px solid #f1f4f8;
+}
+
+.custom-table th {
+    padding: 15px;
+    color: #718096;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.custom-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f4f8;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* --- BADGES DE PERFIL --- */
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.badge-admin { background: #e6f4f1; color: var(--primary-green); }
+.badge-cliente { background: #fff5f5; color: #e53e3e; } /* Responsável */
+.badge-usuario { background: #ebf4ff; color: #4a90e2; } /* Educador */
+
+/* --- BOTÕES DE AÇÃO --- */
+.actions-cell {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.edit-btn { color: #4a90e2; font-size: 1.1rem; transition: 0.2s; }
+.delete-btn { color: #e53e3e; font-size: 1.1rem; transition: 0.2s; }
+
+.edit-btn:hover { transform: scale(1.2); color: #2b6cb0; }
+.delete-btn:hover { transform: scale(1.2); color: #c53030; }
+/* ============================================================
+   ESTILIZAÇÃO DA SIDEBAR (sidebar.php)
+   ============================================================ */
+
+.sidebar {
+    width: 260px;
+    background: var(--bg-card); /* Usa a variável para o Dark Mode */
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    transition: background 0.3s, border 0.3s;
+}
+
+.sidebar-logo {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    letter-spacing: -0.5px;
+}
+
+.nav-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-sub);
+    margin: 25px 0 10px 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: var(--text-main);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    transition: 0.3s;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    background: #e6f4f1;
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.logout-link:hover {
+    background: #fff5f5 !important;
+    color: #e53e3e !important;
+}
+
+/* --- SWITCH DO DARK MODE (DENTRO DA SIDEBAR) --- */
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 10px;
+    margin-top: auto; /* Empurra o switch para o rodapé da sidebar */
+    border-top: 1px solid var(--border-color);
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    width: 40px;
+}
+
+.theme-switch input { display:none; }
+
+.slider {
+    background-color: #ccc;
+    bottom: 0; cursor: pointer;
+    left: 0; position: absolute;
+    right: 0; top: 0;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 3px; content: "";
+    height: 16px; left: 4px;
+    position: absolute; transition: .4s;
+    width: 16px; border-radius: 50%;
+}
+
+input:checked + .slider { background-color: var(--primary-green); }
+input:checked + .slider:before { transform: translateX(18px); }

@@ -1,14 +1,21 @@
 <?php
 session_start();
-if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'admin') {
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['perfil'])) {
     header("Location: form_login.php");
     exit;
 }
 
-include('database.php');
+// DEFINE QUEM PODE VER ESSA PÁGINA:
+// Queremos que tanto o 'admin' (Gestor) quanto o 'usuario' (Educador) acessem.
+$perfis_permitidos = ['admin', 'usuario'];
 
-$sql = "SELECT * FROM produtos_servicos ORDER BY data_cadastro DESC";
-$result = $conn->query($sql);
+if (!in_array($_SESSION['perfil'], $perfis_permitidos)) {
+    // Se um 'cliente' (Pai) tentar entrar, ele é mandado de volta pro painel dele
+    header("Location: painel_cliente.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>

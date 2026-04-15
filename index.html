@@ -1,104 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEIControl - Sistema de Gestão CEI</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <h1>Sistema de Gestão CEI</h1>
-        <ul>
-          <li><a href="#funcionalidades">Funcionalidades</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-        <div class="nav-buttons">
-          <a href="#contato" class="btn">Cadastre-se</a>
-          <a href="form_login.php" class="btn-secundario">Login</a>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container flex-nav">
+            <div class="logo-area">
+                <div class="logo-circle">
+                    <img src="assests/ceicontrol.png" alt="Logo">
+                </div>
+                <span class="logo-text">Sistema de Gestão CEI</span>
+            </div>
+            
+            <nav class="main-nav">
+    <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="nav-auth">
+        <a href="#" class="btn-cadastre">Cadastre-se</a>
+        <a href="form_login.php" class="btn-login">Login</a>
+    </div>
+</nav>
+            </nav>
         </div>
-      </nav>
     </header>
 
-    <section id="hero">
-      <div>
-        <h2>Simplifique a Gestão da Sua CEI Pública</h2>
-        <p>
-          A solução integrada que centraliza fornecedores, agendas e comunicação
-          com os pais, liberando tempo para o que realmente importa: as
-          crianças.
-        </p>
-        <a href="#funcionalidades">Saiba Mais</a>
-      </div>
-    </section>
+    <main>
+        <section class="hero-green">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <div class="carousel-container">
+                        <div class="carousel-item active">
+                            <h1>Simplifique a Gestão da Sua CEI Pública</h1>
+                            <p>A solução integrada que centraliza fornecedores, agendas e comunicação com os pais.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h1>Comunicação Direta e Segura</h1>
+                            <p>Conecte a coordenação pedagógica aos responsáveis em tempo real via chat.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h1>Controle Total de Recursos</h1>
+                            <p>Gerencie estoques, produtos e fornecedores de forma digital e eficiente.</p>
+                        </div>
+                    </div>
+                    <a href="sobre.html" class="btn-black">Saiba Mais</a>
+                </div>
 
-    <section id="funcionalidades">
-      <h2>Nossas Funcionalidades Principais</h2>
-      <div class="grid">
-        <div>
-          <h3>Gestão de Fornecedores</h3>
-          <p>Controle contratos e fornecedores com facilidade.</p>
+                <div class="hero-visual">
+                    <div class="carousel-images">
+                        <img src="assests/image_8cc384.jpg" class="c-img active" alt="Slide 1">
+                        <img src="assests/image_8cca12.jpg" class="c-img" alt="Slide 2">
+                        <img src="assests/istockphoto-998670532-2048x2048.jpg" class="c-img" alt="Slide 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="funcionalidades" class="features-white">
+            <div class="container">
+                <h2 class="section-title">Nossas Funcionalidades Principais</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="icon-box">📦</div>
+                        <h3>Gestão de Fornecedores</h3>
+                        <p>Centralize contatos e informações estratégicas.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-box">📅</div>
+                        <h3>Agenda Inteligente</h3>
+                        <p>Organize eventos, reuniões e rotinas escolares.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-box">💬</div>
+                        <h3>Comunicação com Pais</h3>
+                        <p>Envie avisos e convites de forma rápida e fácil.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-box">🔗</div>
+                        <h3>Integração Total</h3>
+                        <p>Consolide suas ferramentas em um único lugar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2>Chamada para Parceria</h2>
+                    <p>Gostaria de saber mais ou se tornar nosso parceiro? Entre em contato agora.</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nome completo" required>
+                    <input type="email" placeholder="E-mail institucional" required>
+                    <textarea placeholder="Sua mensagem..." rows="4" required></textarea>
+                    <button type="submit" class="btn-black">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-simple">
+        <div class="container">
+            <p>© 2025 JEMTech | Sistema de Gestão CEI</p>
         </div>
-        <div>
-          <h3>Agenda Inteligente</h3>
-          <p>Organize eventos, reuniões e tarefas com clareza.</p>
-        </div>
-        <div>
-          <h3>Comunicação Direta com os Pais</h3>
-          <p>Informações e atualizações em tempo real.</p>
-        </div>
-        <div>
-          <h3>Integração de Recursos</h3>
-          <p>Tudo o que a coordenação precisa em um único lugar.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="sobre">
-      <h2>Nossa Missão</h2>
-      <p>
-        Transformar a gestão das CEIs públicas e buscar parcerias governamentais
-        para fortalecer a educação infantil.
-      </p>
-      <a href="#ods">Saiba Mais</a>
-    </section>
-
-    <section id="ods">
-      <h2>Objetivos de Desenvolvimento Sustentável</h2>
-      <p>
-        Alinhamos nossos esforços com os ODS 4, 9, 10 e 17 para promover uma
-        educação inclusiva, sustentável e de qualidade.
-      </p>
-      <ul>
-        <li>ODS 4 – Educação de Qualidade</li>
-        <li>ODS 9 – Indústria, Inovação e Infraestrutura</li>
-        <li>ODS 10 – Redução das Desigualdades</li>
-        <li>ODS 17 – Parcerias e Meios de Implementação</li>
-      </ul>
-    </section>
-
-    <section id="contato">
-      <h2>Chamada para Parceria</h2>
-      <form>
-        <label>Nome:</label><br />
-        <input type="text" name="nome" required /><br />
-        <label>Email:</label><br />
-        <input type="email" name="email" required /><br />
-        <label>Mensagem:</label><br />
-        <textarea name="mensagem" required></textarea><br />
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Sistema de Gestão CEI</p>
-      <nav>
-        <a href="#">Política de Privacidade</a> |
-        <a href="#">Termos de Uso</a> |
-        <a href="#contato">Contato</a>
-      </nav>
     </footer>
-  </body>
+
+</body>
 </html>
