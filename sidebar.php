@@ -65,3 +65,5 @@
         <i class="fa-solid fa-moon theme-icon-sm"></i>
     </div>
 </aside>
+
+<script src="script.js"></script> 

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - CEIControl</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
 </head>
 <body class="bg-auth">
 
@@ -12,7 +14,17 @@
         <div class="auth-side-form">
             <div class="auth-container">
                 <header class="auth-header">
-                    <a href="index.html" class="logo-text">CEIControl®</a>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <a href="index.html" class="logo-text">CEIControl®</a>
+                        <div class="theme-switch-wrapper" style="margin-top: 0; border-top: none; padding: 0;">
+                            <i class="fa-solid fa-sun theme-icon-sm"></i>
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox" onclick="toggleDarkMode()" />
+                                <div class="slider round"></div>
+                            </label>
+                            <i class="fa-solid fa-moon theme-icon-sm"></i>
+                        </div>
+                    </div>
                 </header>
 
                 <main class="auth-card">
@@ -36,7 +48,7 @@
                         <select name="perfil" id="perfil" required>
                             <option value="" disabled selected>Selecione o seu perfil</option>
                             <option value="admin">Gestor Escolar</option>
-                            <option value="cliente">Responável/Pais</option>
+                            <option value="cliente">Responsável/Pais</option>
                             <option value="usuario">Educador/Professor</option>
                         </select>
 
@@ -59,7 +71,6 @@
                 <div class="visual-footer">
                     <img src="assests/logo_jemtech.png" alt="Logo JEMTech" class="footer-logo">
                     <img src="assests/logo_fatec.jpg" alt="Logo FATEC" class="footer-logo">
-                    
                     <div class="footer-text">
                         <span>Powered by JEMTech & FATEC</span>
                     </div>

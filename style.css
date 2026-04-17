@@ -882,10 +882,14 @@ body.dark-mode .card-icon {
 
 .actions-cell {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.actions-cell a {
+    display: inline-flex;
     align-items: center;
+    margin: 0 8px;
 }
 
 .edit-btn   { color: #4a90e2; font-size: 1.1rem; transition: 0.2s; }
@@ -1182,4 +1186,66 @@ body.dark-mode .card-icon {
     .grid-funcionalidades { grid-template-columns: 1fr; }
 
     .form-card-centered { padding: 25px; }
+}
+/* ============================================================
+   CORREÇÕES DARK MODE — PÁGINAS PÚBLICAS E LOGIN
+   ============================================================ */
+.auth-card h2 {
+    color: var(--text-main);
+}
+
+.auth-header .logo-text {
+    color: var(--text-main) !important;
+}
+
+.auth-form label {
+    color: var(--text-main);
+}
+
+.auth-form input,
+.auth-form select {
+    border: 1px solid var(--border-color);
+    background: var(--bg-body);
+    color: var(--text-main);
+}
+
+.btn-login {
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+/* ============================================================
+   CORREÇÕES DARK MODE — INPUTS LOGIN E BOTÃO NAVBAR
+   ============================================================ */
+
+/* Inputs e select do login */
+.auth-form input,
+.auth-form select {
+    background: var(--bg-body);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+/* Placeholder dos inputs */
+.auth-form input::placeholder {
+    color: var(--text-sub);
+}
+
+/* Opções do select */
+.auth-form select option {
+    background: var(--bg-card);
+    color: var(--text-main);
+}
+
+/* Botão Login no navbar */
+.btn-login {
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    background: transparent;
+}
+
+/* Switch no navbar — alinha melhor com os botões */
+.nav-auth .theme-switch-wrapper {
+    border-top: none;
+    margin-top: 0;
+    padding: 0;
 }

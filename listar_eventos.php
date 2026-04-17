@@ -60,8 +60,6 @@ $pode_editar = ($_SESSION['perfil'] === 'admin');
                             <?php 
                             if ($result && $result->num_rows > 0) {
                                 while ($evento = $result->fetch_assoc()) {
-                                    // AJUSTE AQUI: Como você não tem coluna 'id', usamos o 'titulo'
-                                    // O ideal depois é você adicionar uma coluna ID auto_increment no seu banco.
                                     $identificador = isset($evento['id']) ? $evento['id'] : urlencode($evento['titulo']);
                                     
                                     $titulo = htmlspecialchars($evento['titulo']);
@@ -74,20 +72,20 @@ $pode_editar = ($_SESSION['perfil'] === 'admin');
                                     <tr>
                                         <td>
                                             <div style="display: flex; flex-direction: column;">
-                                                <span style="font-weight: 700; color: #2d3748;"><?php echo $data; ?></span>
-                                                <span style="font-size: 0.75rem; color: #718096;"><i class="fa-regular fa-clock"></i> <?php echo $hora; ?></span>
+                                                <span style="font-weight: 700; color: var(--text-main);"><?php echo $data; ?></span>
+                                                <span style="font-size: 0.75rem; color: var(--text-sub);"><i class="fa-regular fa-clock"></i> <?php echo $hora; ?></span>
                                             </div>
                                         </td>
                                         <td>
-                                            <div style="font-weight: 600; color: #1a202c;"><?php echo $titulo; ?></div>
-                                            <div style="font-size: 0.8rem; color: #a0aec0; max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                            <div style="font-weight: 600; color: var(--text-main);"><?php echo $titulo; ?></div>
+                                            <div style="font-size: 0.8rem; color: var(--text-sub); max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                                 <?php echo $desc; ?>
                                             </div>
                                         </td>
                                         <td>
                                             <span class="badge-agenda"><?php echo $pub; ?></span>
                                         </td>
-                                        <td style="font-size: 0.9rem; color: #718096;">
+                                        <td style="font-size: 0.9rem; color: var(--text-sub);">
                                             <i class="fa-solid fa-location-dot" style="font-size: 0.75rem; color: #00a98f;"></i> <?php echo $loc; ?>
                                         </td>
                                         
@@ -109,7 +107,7 @@ $pode_editar = ($_SESSION['perfil'] === 'admin');
                             } else { 
                             ?>
                                 <tr>
-                                    <td colspan="5" style="text-align: center; padding: 40px; color: #a0aec0;">Nenhum evento agendado.</td>
+                                    <td colspan="5" style="text-align: center; padding: 40px; color: var(--text-sub);">Nenhum evento agendado.</td>
                                 </tr>
                             <?php } ?>
                         </tbody>
