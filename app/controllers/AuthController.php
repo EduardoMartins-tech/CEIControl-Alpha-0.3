@@ -17,21 +17,21 @@ class AuthController {
             $_SESSION['perfil']     = $usuario['perfil'];
 
             switch ($usuario['perfil']) {
-                case 'admin':   header("Location: ../views/auth/painel_admin.php"); break;
-                case 'cliente': header("Location: ../views/auth/painel_cliente.php"); break;
-                case 'usuario': header("Location: ../views/auth/painel_usuario.php"); break;
-                default:        header("Location: ../views/auth/login.php?erro=1"); break;
+                case 'admin':   header("Location: /painel/admin"); break;
+                case 'cliente': header("Location: /painel/cliente"); break;
+                case 'usuario': header("Location: /painel/usuario"); break;
+                default:        header("Location: /login?erro=1"); break;
             }
             exit;
         }
 
-        header("Location: ../views/auth/login.php?erro=1");
+        header("Location: /login?erro=1");
         exit;
     }
 
     public function logout() {
         session_destroy();
-        header("Location: ../views/auth/login.php");
+        header("Location: /login");
         exit;
     }
 }
