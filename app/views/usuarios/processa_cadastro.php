@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'admin') {
-    header("Location: ../auth/form_login.php");
+    header("Location: /login");
     exit;
 }
 
@@ -15,14 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $perfil = trim($_POST['perfil'] ?? '');
 
     if (!$nome || !$email || !$senha || !$perfil) {
-        header("Location: form_cadastro.php?erro=campos_vazios");
+        header("Location: /usuarios/cadastro?erro=campos_vazios");
         exit;
     }
 
     $controller = new UsuarioController($conn);
     $controller->cadastrar($nome, $email, $senha, $perfil);
 } else {
-    header("Location: form_cadastro.php");
+    header("Location: /usuarios/cadastro");
     exit;
 }
 ?>

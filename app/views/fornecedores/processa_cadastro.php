@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'admin') {
-    header("Location: ../auth/form_login.php");
+    header("Location: /login");
     exit;
 }
 
@@ -15,14 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $telefone = trim($_POST['telefone'] ?? '');
 
     if (!$nome || !$cnpj) {
-        header("Location: form_cadastro.php?erro=campos_vazios");
+        header("Location: /fornecedores/cadastro?erro=campos_vazios");
         exit;
     }
 
     $controller = new FornecedorController($conn);
     $controller->cadastrar($nome, $cnpj, $email, $telefone);
 } else {
-    header("Location: form_cadastro.php");
+    header("Location: /fornecedores/cadastro");
     exit;
 }
 ?>

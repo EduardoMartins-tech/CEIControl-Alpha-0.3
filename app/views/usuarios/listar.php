@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'admin') {
-    header("Location: ../auth/form_login.php");
+    header("Location: /login");
     exit;
 }
 
@@ -19,10 +18,10 @@ $pagina_atual = 'usuarios';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de Usuários - CEIControl</title>
-    <link rel="stylesheet" href="../../../public/style.css">
-    <link rel="stylesheet" href="../../../public/mobile.css">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="../../../public/assets/ceicontrol.png">
+    <link rel="icon" type="image/png" href="/public/assets/ceicontrol.png">
 </head>
 <body class="dashboard-body">
 <div class="dashboard-container">
@@ -57,7 +56,7 @@ $pagina_atual = 'usuarios';
                 <h1>Gestão de Usuários</h1>
                 <p>Visualize e gerencie as contas e permissões do sistema.</p>
             </div>
-            <a href="form_cadastro.php" class="btn-black-full" style="width:auto;padding:10px 25px;">
+            <a href="/usuarios/cadastro" class="btn-black-full" style="width:auto;padding:10px 25px;">
                 <i class="fa-solid fa-plus"></i> Novo Usuário
             </a>
         </header>
@@ -92,10 +91,10 @@ $pagina_atual = 'usuarios';
                                     ?>
                                 </td>
                                 <td class="actions-cell">
-                                    <a href="editar.php?id=<?= $row['id']; ?>" class="edit-btn" title="Editar">
+                                    <a href="/usuarios/editar?id=<?= $row['id']; ?>" class="edit-btn" title="Editar">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
-                                    <a href="excluir.php?id=<?= $row['id']; ?>" class="delete-btn" title="Excluir"
+                                    <a href="/usuarios/excluir?id=<?= $row['id']; ?>" class="delete-btn" title="Excluir"
                                        onclick="return confirm('Tem certeza que deseja excluir o usuário <?= htmlspecialchars($row['nome']); ?>?')">
                                         <i class="fa-solid fa-trash"></i>
                                     </a>
@@ -115,6 +114,6 @@ $pagina_atual = 'usuarios';
         </section>
     </main>
 </div>
-<script src="../../../public/script.js"></script>
+<script src="/public/script.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'admin') {
-    header("Location: ../auth/form_login.php");
+    header("Location: /login");
     exit;
 }
 
@@ -9,7 +8,7 @@ require_once __DIR__ . '/../../../config/database.php';
 require_once __DIR__ . '/../../../app/controllers/EventoController.php';
 
 if (!isset($_GET['id'])) {
-    header("Location: listar.php");
+    header("Location: /eventos");
     exit;
 }
 
@@ -17,7 +16,7 @@ $controller = new EventoController($conn);
 $evento = $controller->buscar((int)$_GET['id']);
 
 if (!$evento) {
-    header("Location: listar.php?erro=nao_encontrado");
+    header("Location: /eventos?erro=nao_encontrado");
     exit;
 }
 
@@ -29,10 +28,10 @@ $pagina_atual = 'agenda';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Evento - CEIControl</title>
-    <link rel="stylesheet" href="../../../public/style.css">
-    <link rel="stylesheet" href="../../../public/mobile.css">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="../../../public/assets/ceicontrol.png">
+    <link rel="icon" type="image/png" href="/public/assets/ceicontrol.png">
 </head>
 <body class="dashboard-body">
 <div class="dashboard-container">
@@ -44,14 +43,14 @@ $pagina_atual = 'agenda';
                 <h1>Editar Evento</h1>
                 <p>Gerencie as informações da agenda escolar.</p>
             </div>
-            <a href="listar.php" class="btn-sm secondary" style="text-decoration:none;">
+            <a href="/eventos" class="btn-sm secondary" style="text-decoration:none;">
                 <i class="fa-solid fa-arrow-left"></i> Voltar
             </a>
         </header>
 
         <section class="content-wrapper-centered">
             <div class="form-card-centered">
-                <form action="atualizar.php" method="POST" class="custom-form">
+                <form action="/eventos/atualizar" method="POST" class="custom-form">
                     <input type="hidden" name="id" value="<?= $evento['id']; ?>">
 
                     <div class="form-group">
@@ -97,6 +96,6 @@ $pagina_atual = 'agenda';
         </section>
     </main>
 </div>
-<script src="../../../public/script.js"></script>
+<script src="/public/script.js"></script>
 </body>
 </html>

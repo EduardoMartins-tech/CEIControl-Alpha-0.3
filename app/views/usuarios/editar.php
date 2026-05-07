@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'admin') {
-    header("Location: ../auth/form_login.php");
+    header("Location: /login");
     exit;
 }
 
@@ -9,7 +8,7 @@ require_once __DIR__ . '/../../../config/database.php';
 require_once __DIR__ . '/../../../app/controllers/UsuarioController.php';
 
 if (!isset($_GET['id'])) {
-    header("Location: listar.php?erro=id_invalido");
+    header("Location: /usuarios?erro=id_invalido");
     exit;
 }
 
@@ -17,7 +16,7 @@ $controller = new UsuarioController($conn);
 $usuario = $controller->buscar((int)$_GET['id']);
 
 if (!$usuario) {
-    header("Location: listar.php?erro=usuario_nao_encontrado");
+    header("Location: /usuarios?erro=usuario_nao_encontrado");
     exit;
 }
 
@@ -29,10 +28,10 @@ $pagina_atual = 'usuarios';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Usuário - CEIControl</title>
-    <link rel="stylesheet" href="../../../public/style.css">
-    <link rel="stylesheet" href="../../../public/mobile.css">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="../../../public/assets/ceicontrol.png">
+    <link rel="icon" type="image/png" href="/public/assets/ceicontrol.png">
 </head>
 <body class="dashboard-body">
 <div class="dashboard-container">
@@ -45,14 +44,14 @@ $pagina_atual = 'usuarios';
                 <h1>Editar Cadastro</h1>
                 <p>Modificando os dados de: <strong><?= htmlspecialchars($usuario['nome']) ?></strong></p>
             </div>
-            <a href="listar.php" class="btn-black-full" style="width:auto;padding:10px 25px;background:#666;">
+            <a href="/usuarios" class="btn-black-full" style="width:auto;padding:10px 25px;background:#666;">
                 <i class="fa-solid fa-arrow-left"></i> Voltar
             </a>
         </header>
 
         <section class="content-wrapper">
             <div class="admin-card" style="max-width:600px;margin:0 auto;display:block;">
-                <form action="atualizar.php" method="POST" class="custom-form">
+                <form action="/usuarios/atualizar" method="POST" class="custom-form">
                     <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
 
                     <div class="form-group">
@@ -87,6 +86,6 @@ $pagina_atual = 'usuarios';
         </section>
     </main>
 </div>
-<script src="../../../public/script.js"></script>
+<script src="/public/script.js"></script>
 </body>
 </html>

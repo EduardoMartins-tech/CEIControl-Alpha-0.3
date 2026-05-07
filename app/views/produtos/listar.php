@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || !in_array($_SESSION['perfil'], ['admin', 'usuario'])) {
-    header("Location: ../auth/form_login.php");
+    header("Location: /login");
     exit;
 }
 
@@ -16,10 +15,10 @@ $servicos = $conn->query("SELECT * FROM servicos ORDER BY nome ASC");
 <head>
     <meta charset="UTF-8">
     <title>Estoque e Serviços - CEIControl</title>
-    <link rel="stylesheet" href="../../../public/style.css">
-    <link rel="stylesheet" href="../../../public/mobile.css">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="../../../public/assets/ceicontrol.png">
+    <link rel="icon" type="image/png" href="/public/assets/ceicontrol.png">
 </head>
 <body class="dashboard-body">
 <div class="dashboard-container">
@@ -33,8 +32,7 @@ $servicos = $conn->query("SELECT * FROM servicos ORDER BY nome ASC");
             </div>
             <?php if ($_SESSION['perfil'] == 'admin'): ?>
             <div style="display:flex;gap:10px;">
-                <a href="form_cadastro.php" class="btn-black-full" style="width:auto;padding:10px 20px;"><i class="fa-solid fa-plus"></i> Produto</a>
-                <a href="form_cadastro_servico.php" class="btn-black-full" style="width:auto;padding:10px 20px;background:#333;"><i class="fa-solid fa-plus"></i> Serviço</a>
+                <a href="/produtos/cadastro" class="btn-black-full" style="width:auto;padding:10px 20px;"><i class="fa-solid fa-plus"></i> Produto</a>
             </div>
             <?php endif; ?>
         </header>
@@ -66,8 +64,8 @@ $servicos = $conn->query("SELECT * FROM servicos ORDER BY nome ASC");
                             <td><strong>R$ <?= number_format($p['preco'] * $p['quantidade'], 2, ',', '.'); ?></strong></td>
                             <?php if ($_SESSION['perfil'] == 'admin'): ?>
                             <td class="actions-cell">
-                                <a href="atualizar.php?id=<?= $p['id']; ?>" class="edit-btn" title="Editar"><i class="fa-solid fa-pen-to-square"></i></a>
-                                <a href="excluir.php?id=<?= $p['id']; ?>" class="delete-btn" title="Excluir" onclick="return confirm('Excluir este produto?')"><i class="fa-solid fa-trash"></i></a>
+                                <a href="/produtos/editar?id=<?= $p['id']; ?>" class="edit-btn" title="Editar"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="/produtos/excluir?id=<?= $p['id']; ?>" class="delete-btn" title="Excluir" onclick="return confirm('Excluir este produto?')"><i class="fa-solid fa-trash"></i></a>
                             </td>
                             <?php endif; ?>
                         </tr>
@@ -101,8 +99,8 @@ $servicos = $conn->query("SELECT * FROM servicos ORDER BY nome ASC");
                             <td>R$ <?= number_format($s['preco'], 2, ',', '.'); ?></td>
                             <?php if ($_SESSION['perfil'] == 'admin'): ?>
                             <td class="actions-cell">
-                                <a href="atualizar_servico.php?id=<?= $s['id']; ?>" class="edit-btn" title="Editar"><i class="fa-solid fa-pen-to-square"></i></a>
-                                <a href="excluir_servico.php?id=<?= $s['id']; ?>" class="delete-btn" title="Excluir" onclick="return confirm('Excluir este serviço?')"><i class="fa-solid fa-trash"></i></a>
+                                <a href="/produtos/editar-servico?id=<?= $s['id']; ?>" class="edit-btn" title="Editar"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="/produtos/excluir-servico?id=<?= $s['id']; ?>" class="delete-btn" title="Excluir" onclick="return confirm('Excluir este serviço?')"><i class="fa-solid fa-trash"></i></a>
                             </td>
                             <?php endif; ?>
                         </tr>
@@ -114,6 +112,6 @@ $servicos = $conn->query("SELECT * FROM servicos ORDER BY nome ASC");
         </section>
     </main>
 </div>
-<script src="../../../public/script.js"></script>
+<script src="/public/script.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'admin') {
-    header("Location: ../auth/form_login.php");
+    header("Location: /login");
     exit;
 }
 $pagina_atual = 'estoque';
@@ -11,10 +10,10 @@ $pagina_atual = 'estoque';
 <head>
     <meta charset="UTF-8">
     <title>Novo Produto - CEIControl</title>
-    <link rel="stylesheet" href="../../../public/style.css">
-    <link rel="stylesheet" href="../../../public/mobile.css">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="../../../public/assets/ceicontrol.png">
+    <link rel="icon" type="image/png" href="/public/assets/ceicontrol.png">
 </head>
 <body class="dashboard-body">
 <div class="dashboard-container">
@@ -26,14 +25,14 @@ $pagina_atual = 'estoque';
                 <h1>Novo Produto</h1>
                 <p>Adicione um item ao estoque da unidade.</p>
             </div>
-            <a href="listar.php" class="btn-sm secondary" style="text-decoration:none;">
+            <a href="/produtos" class="btn-sm secondary" style="text-decoration:none;">
                 <i class="fa-solid fa-arrow-left"></i> Voltar
             </a>
         </header>
 
         <section class="content-wrapper-centered">
             <div class="form-card-centered">
-                <form action="processa_cadastro.php" method="POST" class="custom-form">
+                <form action="/produtos/processa" method="POST" class="custom-form">
 
                     <div class="form-group">
                         <label><i class="fa-solid fa-box"></i> Nome do Produto</label>
@@ -64,6 +63,6 @@ $pagina_atual = 'estoque';
         </section>
     </main>
 </div>
-<script src="../../../public/script.js"></script>
+<script src="/public/script.js"></script>
 </body>
 </html>

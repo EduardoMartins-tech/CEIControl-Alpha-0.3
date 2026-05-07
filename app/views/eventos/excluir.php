@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'admin') {
-    header("Location: ../auth/form_login.php");
+    header("Location: /login");
     exit;
 }
 
@@ -14,7 +13,7 @@ if ($id > 0) {
     $controller = new EventoController($conn);
     $controller->excluir($id);
 } else {
-    header("Location: listar.php");
+    header("Location: /eventos");
     exit;
 }
 ?>

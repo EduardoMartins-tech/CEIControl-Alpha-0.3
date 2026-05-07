@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'admin') {
-    header("Location: ../auth/form_login.php");
+    header("Location: /login");
     exit;
 }
 
@@ -16,14 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $telefone = trim($_POST['telefone']   ?? '');
 
     if ($id === 0 || !$nome || !$cnpj) {
-        header("Location: listar.php?erro=dados_invalidos");
+        header("Location: /fornecedores?erro=dados_invalidos");
         exit;
     }
 
     $controller = new FornecedorController($conn);
     $controller->atualizar($id, $nome, $cnpj, $email, $telefone);
 } else {
-    header("Location: listar.php");
+    header("Location: /fornecedores");
     exit;
 }
 ?>
