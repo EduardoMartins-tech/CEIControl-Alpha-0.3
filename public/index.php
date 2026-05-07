@@ -67,9 +67,9 @@
 
                 <div class="hero-visual">
                     <div class="carousel-images">
-                        <img src="assests/image_8cc384.jpg" class="c-img active" alt="Slide 1">
-                        <img src="assests/image_8cca12.jpg" class="c-img" alt="Slide 2">
-                        <img src="assests/istockphoto-998670532-2048x2048.jpg" class="c-img" alt="Slide 3">
+                        <img src="/public/assets/image_8cc384.jpg" class="c-img active" alt="Slide 1">
+                        <img src="/public/assets/image_8cca12.jpg" class="c-img" alt="Slide 2">
+                        <img src="/public/assets/istockphoto-998670532-2048x2048.jpg" class="c-img" alt="Slide 3">
                     </div>
                 </div>
             </div>
