@@ -16,7 +16,7 @@
             <div class="auth-container">
                 <header class="auth-header">
                     <div style="display:flex;justify-content:space-between;align-items:center;">
-                        <a href="../../../public/index.php" class="logo-text">CEIControl®</a>
+                        <a href="/" class="logo-text">CEIControl®</a>
                         <div class="theme-switch-wrapper" style="margin-top:0;border-top:none;padding:0;">
                             <i class="fa-solid fa-sun theme-icon-sm"></i>
                             <label class="theme-switch" for="checkbox">
@@ -36,7 +36,7 @@
                         <div class="error-msg">E-mail, senha ou perfil inválidos.</div>
                     <?php endif; ?>
 
-                    <form action="login_user.php" method="POST" class="auth-form">
+                    <form action="/login/user" method="POST" class="auth-form">
                         <label for="email">E-mail</label>
                         <input type="email" name="email" id="email" placeholder="seu@email.com" required>
 
@@ -56,7 +56,7 @@
 
                     <footer class="auth-footer">
                         <p>Problemas com o acesso?<br>
-                        <a href="../../../public/index.php#contato">Contacte o suporte da JEMTech</a></p>
+                        <a href="/#contato">Contacte o suporte da JEMTech</a></p>
                     </footer>
                 </main>
             </div>
