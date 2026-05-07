@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'usuario') {
-    header("Location: form_login.php");
+    header("Location: /login");
     exit;
 }
 $pagina_atual = 'dashboard';
@@ -45,8 +44,8 @@ $pagina_atual = 'dashboard';
                         <h3>Agenda e Eventos</h3>
                         <p>Visualize ou adicione atividades ao calendário escolar.</p>
                         <div class="card-actions">
-                            <a href="../eventos/form_cadastro.php" class="btn-sm primary">Novo Evento</a>
-                            <a href="../eventos/listar.php" class="btn-sm">Ver Tudo</a>
+                            <a href="/eventos/cadastro" class="btn-sm primary">Novo Evento</a>
+                            <a href="/eventos" class="btn-sm">Ver Tudo</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +58,7 @@ $pagina_atual = 'dashboard';
                         <h3>Comunicados</h3>
                         <p>Envie avisos para os responsáveis ou fale com a gestão.</p>
                         <div class="card-actions">
-                            <a href="../comunicacao.php" class="btn-sm primary">Abrir Chat</a>
+                            <a href="/comunicacao" class="btn-sm primary">Abrir Chat</a>
                         </div>
                     </div>
                 </div>
@@ -72,7 +71,7 @@ $pagina_atual = 'dashboard';
                         <h3>Materiais e Estoque</h3>
                         <p>Consulte a lista de produtos e materiais pedagógicos disponíveis.</p>
                         <div class="card-actions">
-                            <a href="../produtos/listar.php" class="btn-sm">Consultar Materiais</a>
+                            <a href="/produtos" class="btn-sm">Consultar Materiais</a>
                         </div>
                     </div>
                 </div>

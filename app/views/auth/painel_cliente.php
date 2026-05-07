@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'cliente') {
-    header("Location: form_login.php");
+    header("Location: /login");
     exit;
 }
 $pagina_atual = 'dashboard';
@@ -44,7 +43,7 @@ $pagina_atual = 'dashboard';
                         <h3>Agenda Escolar</h3>
                         <p>Confira feriados, reuniões e eventos especiais da unidade.</p>
                         <div class="card-actions">
-                            <a href="../eventos/listar.php" class="btn-sm primary">Ver Agenda da CEI</a>
+                            <a href="/eventos" class="btn-sm primary">Ver Agenda da CEI</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +56,7 @@ $pagina_atual = 'dashboard';
                         <h3>Comunicação</h3>
                         <p>Fale diretamente com a coordenação ou veja avisos importantes.</p>
                         <div class="card-actions">
-                            <a href="../comunicacao.php" class="btn-sm primary">Acessar Mensagens</a>
+                            <a href="/comunicacao" class="btn-sm primary">Acessar Mensagens</a>
                         </div>
                     </div>
                 </div>

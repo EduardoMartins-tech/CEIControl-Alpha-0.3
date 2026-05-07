@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] !== 'admin') {
-    header("Location: form_login.php");
+    header("Location: /login");
     exit;
 }
 $pagina_atual = 'dashboard';
@@ -42,8 +41,8 @@ $pagina_atual = 'dashboard';
                         <h3>Usuários</h3>
                         <p>Controle de acessos e perfis.</p>
                         <div class="card-actions">
-                            <a href="../usuarios/form_cadastro.php" class="btn-sm primary">Cadastrar</a>
-                            <a href="../usuarios/listar.php" class="btn-sm">Listar</a>
+                            <a href="/usuarios/cadastro" class="btn-sm primary">Cadastrar</a>
+                            <a href="/usuarios" class="btn-sm">Listar</a>
                         </div>
                     </div>
                 </div>
@@ -54,8 +53,8 @@ $pagina_atual = 'dashboard';
                         <h3>Produtos e Serviços</h3>
                         <p>Gestão de itens e inventário.</p>
                         <div class="card-actions">
-                            <a href="../produtos/form_cadastro.php" class="btn-sm primary">Cadastrar</a>
-                            <a href="../produtos/listar.php" class="btn-sm">Listar</a>
+                            <a href="/produtos/cadastro" class="btn-sm primary">Cadastrar</a>
+                            <a href="/produtos" class="btn-sm">Listar</a>
                         </div>
                     </div>
                 </div>
@@ -66,8 +65,8 @@ $pagina_atual = 'dashboard';
                         <h3>Fornecedores</h3>
                         <p>Logística e parceiros.</p>
                         <div class="card-actions">
-                            <a href="../fornecedores/form_cadastro.php" class="btn-sm primary">Cadastrar</a>
-                            <a href="../fornecedores/listar.php" class="btn-sm">Listar</a>
+                            <a href="/fornecedores/cadastro" class="btn-sm primary">Cadastrar</a>
+                            <a href="/fornecedores" class="btn-sm">Listar</a>
                         </div>
                     </div>
                 </div>
@@ -78,8 +77,8 @@ $pagina_atual = 'dashboard';
                         <h3>Agenda</h3>
                         <p>Eventos e cronograma escolar.</p>
                         <div class="card-actions">
-                            <a href="../eventos/form_cadastro.php" class="btn-sm primary">Cadastrar</a>
-                            <a href="../eventos/listar.php" class="btn-sm">Listar</a>
+                            <a href="/eventos/cadastro" class="btn-sm primary">Cadastrar</a>
+                            <a href="/eventos" class="btn-sm">Listar</a>
                         </div>
                     </div>
                 </div>
@@ -90,7 +89,7 @@ $pagina_atual = 'dashboard';
                         <h3>Comunicação</h3>
                         <p>Acesse as mensagens e comunicados internos.</p>
                         <div class="card-actions">
-                            <a href="../comunicacao.php" class="btn-sm primary">Acessar Mensagens</a>
+                            <a href="/comunicacao" class="btn-sm primary">Acessar Mensagens</a>
                         </div>
                     </div>
                 </div>
