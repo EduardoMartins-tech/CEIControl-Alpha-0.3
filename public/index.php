@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEIControl - Sistema de Gestão CEI</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="assests/ceicontrol.png">
-    <script defer src="script.js"></script>
+    <script defer src="/public/script.js"></script>
 </head>
 <body>
 
@@ -16,16 +16,16 @@
         <div class="container flex-nav">
             <div class="logo-area">
                 <div class="logo-circle">
-                    <img src="assests/ceicontrol.png" alt="Logo">
+                    <img src="/public/assets/ceicontrol.png" alt="Logo">
                 </div>
                 <span class="logo-text">Sistema de Gestão CEI</span>
             </div>
             
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="index.php">Início</a></li>
+                    <li><a href="/public/index.php">Início</a></li>
                     <li><a href="#funcionalidades">Funcionalidades</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
                 <div class="nav-auth">
