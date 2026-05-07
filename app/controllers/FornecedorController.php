@@ -18,19 +18,19 @@ class FornecedorController {
 
     public function cadastrar($nome, $cnpj, $email, $telefone) {
         $this->model->criar($nome, $cnpj, $email, $telefone);
-        header("Location: ../views/fornecedores/listar.php?msg=cadastrado");
+        header("Location: /fornecedores?msg=cadastrado");
         exit;
     }
 
     public function atualizar($id, $nome, $cnpj, $email, $telefone) {
         $this->model->atualizar($id, $nome, $cnpj, $email, $telefone);
-        header("Location: ../views/fornecedores/listar.php?msg=editado");
+        header("Location: /fornecedores?msg=editado");
         exit;
     }
 
     public function excluir($id) {
         $this->model->excluir($id);
-        header("Location: ../views/fornecedores/listar.php?msg=excluido");
+        header("Location: /fornecedores?msg=excluido");
         exit;
     }
 }

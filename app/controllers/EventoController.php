@@ -18,19 +18,19 @@ class EventoController {
 
     public function cadastrar($titulo, $descricao, $data_evento, $hora_evento, $local, $criado_por, $publico_alvo) {
         $this->model->criar($titulo, $descricao, $data_evento, $hora_evento, $local, $criado_por, $publico_alvo);
-        header("Location: ../views/eventos/listar.php?msg=cadastrado");
+        header("Location: /eventos?msg=cadastrado");
         exit;
     }
 
     public function atualizar($id, $titulo, $descricao, $data_evento, $hora_evento, $local, $publico_alvo) {
         $this->model->atualizar($id, $titulo, $descricao, $data_evento, $hora_evento, $local, $publico_alvo);
-        header("Location: ../views/eventos/listar.php?msg=editado");
+        header("Location: /eventos?msg=editado");
         exit;
     }
 
     public function excluir($id) {
         $this->model->excluir($id);
-        header("Location: ../views/eventos/listar.php?msg=excluido");
+        header("Location: /eventos?msg=excluido");
         exit;
     }
 }

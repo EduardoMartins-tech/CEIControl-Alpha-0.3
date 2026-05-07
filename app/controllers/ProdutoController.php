@@ -18,19 +18,19 @@ class ProdutoController {
 
     public function cadastrar($nome, $descricao, $preco, $quantidade) {
         $this->model->criar($nome, $descricao, $preco, $quantidade);
-        header("Location: ../views/produtos/listar.php?msg=cadastrado");
+        header("Location: /produtos?msg=cadastrado");
         exit;
     }
 
     public function atualizar($id, $nome, $descricao, $preco, $quantidade) {
         $this->model->atualizar($id, $nome, $descricao, $preco, $quantidade);
-        header("Location: ../views/produtos/listar.php?msg=editado");
+        header("Location: /produtos?msg=editado");
         exit;
     }
 
     public function excluir($id) {
         $this->model->excluir($id);
-        header("Location: ../views/produtos/listar.php?msg=excluido");
+        header("Location: /produtos?msg=excluido");
         exit;
     }
 }

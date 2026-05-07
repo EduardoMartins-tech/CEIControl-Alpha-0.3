@@ -18,28 +18,28 @@ class UsuarioController {
 
     public function cadastrar($nome, $email, $senha, $perfil) {
         if ($this->model->emailExiste($email)) {
-            header("Location: ../views/usuarios/form_cadastro.php?erro=email_duplicado");
+            header("Location: /usuarios/cadastro?erro=email_duplicado");
             exit;
         }
         $senhaHash = password_hash($senha, PASSWORD_BCRYPT);
         $this->model->criar($nome, $email, $senhaHash, $perfil);
-        header("Location: ../views/usuarios/listar.php?msg=cadastrado");
+        header("Location: /usuarios?msg=cadastrado");
         exit;
     }
 
     public function atualizar($id, $nome, $email, $perfil) {
         if ($this->model->emailExiste($email, $id)) {
-            header("Location: ../views/usuarios/editar.php?id=$id&erro=email_duplicado");
+            header("Location: /usuarios/editar?id=$id&erro=email_duplicado");
             exit;
         }
         $this->model->atualizar($id, $nome, $email, $perfil);
-        header("Location: ../views/usuarios/listar.php?msg=editado");
+        header("Location: /usuarios?msg=editado");
         exit;
     }
 
     public function excluir($id) {
         $this->model->excluir($id);
-        header("Location: ../views/usuarios/listar.php?msg=excluido");
+        header("Location: /usuarios?msg=excluido");
         exit;
     }
 }
