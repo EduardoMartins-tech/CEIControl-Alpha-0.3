@@ -4,7 +4,7 @@ session_start();
 $path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 
 $routes = [
-    ''                          => 'app/views/auth/form_login.php',
+    ''                          => 'public/index.php',
     'login'                     => 'app/views/auth/form_login.php',
     'login/user'                => 'app/views/auth/login_user.php',
     'logout'                    => 'app/views/auth/logout.php',
@@ -43,6 +43,7 @@ $routes = [
 
     'comunicacao'               => 'app/views/comunicacao.php',
     'mensagens/enviar'          => 'app/views/enviar_mensagens.php',
+    'sobre'    => 'public/sobre.html',
 ];
 
 if (isset($routes[$path])) {
