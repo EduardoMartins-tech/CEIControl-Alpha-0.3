@@ -1219,7 +1219,7 @@ body.dark-mode .card-icon {
 
 .chat-container {
     display: flex;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 80px);
     background: var(--bg-card);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
