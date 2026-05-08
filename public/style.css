@@ -1343,3 +1343,14 @@ body.dark-mode .card-icon {
 .send-btn:hover { background: #333; }
 
 .input-icons { display: flex; align-items: center; }
+
+.chat-main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px !important;
+}
+
+.chat-container {
+    height: calc(100vh - 120px);
+    margin: 0;
+}
