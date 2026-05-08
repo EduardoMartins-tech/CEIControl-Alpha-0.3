@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../models/FornecedorModel.php';
+require_once __DIR__ . '/../models/FornecedoresModel.php';
 
 class FornecedorController {
     private $model;
