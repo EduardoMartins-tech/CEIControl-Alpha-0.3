@@ -1,11 +1,10 @@
 <?php
-session_start();
-require_once __DIR__ . '/../../config/database.php';
-
 if (!isset($_SESSION['usuario_id'])) {
-    header("Location: /app/views/auth/form_login.php");
+    header("Location: /login");
     exit;
 }
+
+require_once __DIR__ . '/../../config/database.php';
 
 $pagina_atual   = 'comunicacao';
 $meu_id         = $_SESSION['usuario_id'];
@@ -54,7 +53,6 @@ if ($id_contato > 0) {
     <main class="main-content chat-main">
         <div class="chat-container">
 
-            <!-- LISTA DE CONTATOS -->
             <aside class="chat-sidebar">
                 <div class="chat-search">
                     <h3>Conversas</h3>
@@ -72,7 +70,7 @@ if ($id_contato > 0) {
                     while($u = $usuarios->fetch_assoc()):
                     ?>
                     <li class="contact-item <?= ($id_contato == $u['id']) ? 'active' : '' ?>"
-                        onclick="location.href='/app/views/comunicacao.php?id_contato=<?= $u['id'] ?>'">
+                        onclick="location.href='/comunicacao?id_contato=<?= $u['id'] ?>'">
                         <div class="avatar-icon"><i class="fa-solid fa-user"></i></div>
                         <div class="contact-info">
                             <h4><?= htmlspecialchars($u['nome']) ?></h4>
@@ -83,7 +81,6 @@ if ($id_contato > 0) {
                 </ul>
             </aside>
 
-            <!-- JANELA DO CHAT -->
             <section class="chat-window">
                 <?php if ($id_contato > 0): ?>
                 <header class="chat-header">
@@ -119,7 +116,7 @@ if ($id_contato > 0) {
                 </div>
 
                 <footer class="chat-input-area">
-                    <form action="/app/views/enviar_mensagens.php" method="POST" class="input-wrapper">
+                    <form action="/mensagens/enviar" method="POST" class="input-wrapper">
                         <input type="hidden" name="destinatario_id" value="<?= $id_contato ?>">
                         <input type="text" name="mensagem" id="msgInput" placeholder="Digite sua mensagem..." required autocomplete="off">
                         <div class="input-icons">
@@ -141,7 +138,6 @@ if ($id_contato > 0) {
                 <?php endif; ?>
             </section>
 
-            <!-- PERFIL LATERAL -->
             <aside class="chat-profile-info">
                 <?php if ($id_contato > 0): ?>
                 <div class="avatar-icon large"><i class="fa-solid fa-user"></i></div>
