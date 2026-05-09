@@ -162,7 +162,7 @@ CEIControl/
 | Perfil | Descrição | E-mail | Senha |
 |--------|-----------|--------|-------|
 | **Admin** | Gestor Escolar — acesso total | admin@cei.com | 123456 |
-| **Usuario** | Educador — agenda e materiais | usuario@cei.com | U123456 |
+| **Usuario** | Educador — agenda e materiais | usuario@cei.com | 123456 |
 | **Cliente** | Responsável — agenda e chat | cliente@cei.com | 123456 |
 
 > ⚠️ Credenciais apenas para ambiente de demonstração. Altere antes de uso em produção.
