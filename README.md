@@ -1,9 +1,9 @@
 # 🚀 CEIControl
 
 <p align="center">
-  <img src="assests/ceicontrol.png" height="120"/>
+  <img src="public/assets/ceicontrol.png" height="120"/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="assests/jemtech.png" height="120"/>
+  <img src="public/assets/logo_jemtech.png" height="120"/>
 </p>
 
 <p align="center">
@@ -12,10 +12,11 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" />
-  <img src="https://img.shields.io/badge/version-0.3-blue" />
+  <img src="https://img.shields.io/badge/version-0.4-blue" />
   <img src="https://img.shields.io/badge/license-MIT-green" />
   <img src="https://img.shields.io/badge/PHP-Backend-blueviolet" />
   <img src="https://img.shields.io/badge/MySQL-Database-orange" />
+  <img src="https://img.shields.io/badge/MVC-Architecture-brightgreen" />
 </p>
 
 ---
@@ -26,22 +27,25 @@ O **CEIControl** é uma plataforma web desenvolvida para **modernizar e simplifi
 
 A proposta é centralizar em um único sistema:
 
-- 👥 Gestão de usuários  
-- 📦 Controle de recursos  
-- 📅 Agenda digital  
-- 💬 Comunicação entre escola e responsáveis  
+- 👥 Gestão de usuários e perfis de acesso
+- 📦 Controle de estoque e serviços
+- 🏢 Gestão de fornecedores
+- 📅 Agenda digital escolar
+- 💬 Comunicação interna entre usuários
 
-> 💡 Projeto desenvolvido pela **JEMTech**, focada em soluções digitais para o setor público.
+> 💡 Projeto desenvolvido pela **JEMTech**, focada em soluções digitais para o setor público de educação.
 
 ---
 
 ## 📎 Links do Projeto
 
-Para garantir a transparência e facilitar a avaliação, abaixo estão os links oficiais da documentação e versionamento:
-
-* **🌐 Deploy Online:** [https://ceicontrol.up.railway.app](https://ceicontrol.up.railway.app)
-* **Repositório Oficial (Alpha 0.2):** [GitHub - CEIControl Alpha 0.2](https://github.com/EduardoMartins-tech/CEIControl-Alpha-0.2)
-* **Wireframe e Protótipo:** [Visualizar Protótipo no Figma](https://www.figma.com/design/Ik8DcPkOuDatNVvMvnUDYq/CCsite?node-id=0-1&p=f)
+| Recurso | Link |
+|---------|------|
+| 🌐 Deploy Backend | [ceicontrol.up.railway.app](https://ceicontrol.up.railway.app) |
+| 🖥️ Deploy Frontend | [CEIControl Front](https://eduardomartins-tech.github.io/CEIControl-Front/) |
+| 📦 Repositório Backend | [GitHub - CEIControl Alpha 0.3](https://github.com/EduardoMartins-tech/CEIControl-Alpha-0.3) |
+| 🎨 Repositório Frontend | [GitHub - CEIControl Front](https://github.com/EduardoMartins-tech/CEIControl-Front) |
+| 🖌️ Protótipo Figma | [Visualizar no Figma](https://www.figma.com/design/Ik8DcPkOuDatNVvMvnUDYq/CCsite?node-id=0-1&p=f) |
 
 ---
 
@@ -73,22 +77,64 @@ Criar uma plataforma gratuita, eficiente e acessível para a gestão de CEIs, pr
 
 ### 🔹 Objetivos Específicos
 
-- 📊 Centralizar dados administrativos  
-- 💬 Melhorar comunicação com responsáveis  
-- 🔐 Garantir segurança com controle de acesso  
-- ⚙️ Utilizar tecnologias modernas  
-- 🌍 Promover inclusão digital  
+- 📊 Centralizar dados administrativos
+- 💬 Melhorar comunicação com responsáveis
+- 🔐 Garantir segurança com controle de acesso por perfil
+- ⚙️ Utilizar arquitetura MVC para escalabilidade
+- 🌍 Promover inclusão digital no setor público
 
 ---
 
 ## 🌟 Funcionalidades
 
-- ✅ CRUD completo (Usuários, Produtos, Serviços)
+- ✅ CRUD completo — Usuários, Produtos, Serviços, Fornecedores, Eventos
 - 💬 Chat interno entre usuários do sistema
-- 📅 Agenda digital integrada
-- 📊 Relatórios e ocorrências
-- 🔐 Sistema de autenticação por perfil
+- 📅 Agenda digital com controle de público-alvo
+- 🔐 Autenticação por perfil com hash BCrypt
 - 🌙 Modo escuro (Dark Mode)
+- 📱 Layout responsivo para mobile
+- ✔️ Validações com JavaScript no front-end
+
+---
+
+## 🏗️ Arquitetura MVC
+
+```
+CEIControl/
+├── config/
+│   └── database.php
+├── app/
+│   ├── models/
+│   │   ├── UsuarioModel.php
+│   │   ├── ProdutoModel.php
+│   │   ├── FornecedoresModel.php
+│   │   ├── EventoModel.php
+│   │   └── MensagemModel.php
+│   ├── controllers/
+│   │   ├── AuthController.php
+│   │   ├── UsuarioController.php
+│   │   ├── ProdutoController.php
+│   │   ├── FornecedorController.php
+│   │   └── EventoController.php
+│   └── views/
+│       ├── auth/
+│       ├── usuarios/
+│       ├── produtos/
+│       ├── fornecedores/
+│       ├── eventos/
+│       ├── comunicacao.php
+│       └── enviar_mensagens.php
+├── public/
+│   ├── index.php
+│   ├── sobre.html
+│   ├── style.css
+│   ├── mobile.css
+│   ├── script.js
+│   └── assets/
+├── sidebar.php
+├── router.php
+└── tabelas.sql
+```
 
 ---
 
@@ -98,12 +144,14 @@ Criar uma plataforma gratuita, eficiente e acessível para a gestão de CEIs, pr
 
 | Tecnologia | Uso |
 |-----------|-----|
-| PHP | Back-end |
-| MySQL | Banco de dados |
-| HTML5 | Estrutura |
-| CSS3 | Estilo |
-| JavaScript | Interatividade e Validações |
-| Railway | Hospedagem e Deploy |
+| PHP 8.x | Back-end e arquitetura MVC |
+| MySQL | Banco de dados relacional |
+| HTML5 | Estrutura das views |
+| CSS3 | Estilo e responsividade |
+| JavaScript | Interatividade e validações |
+| Railway | Hospedagem e deploy |
+| Apache | Servidor web com mod_rewrite |
+| BCrypt | Hash seguro de senhas |
 
 </p>
 
@@ -111,82 +159,112 @@ Criar uma plataforma gratuita, eficiente e acessível para a gestão de CEIs, pr
 
 ## 🔐 Perfis de Acesso
 
-| Perfil | E-mail | Senha |
-|--------|--------|-------|
-| **Admin (Gestor Escolar)** | admin@cei.com | 123456 |
-| **Cliente (Responsável)** | cliente@cei.com | 123456 |
-| **Usuário (Educador)** | usuario@cei.com | U123456 |
+| Perfil | Descrição | E-mail | Senha |
+|--------|-----------|--------|-------|
+| **Admin** | Gestor Escolar — acesso total | admin@cei.com | 123456 |
+| **Usuario** | Educador — agenda e materiais | usuario@cei.com | U123456 |
+| **Cliente** | Responsável — agenda e chat | cliente@cei.com | 123456 |
 
-
----
-
-## 🚀 Implementações da Versão Alfa 0.3
-
-Nesta etapa, consolidamos a infraestrutura do sistema **CEIControl**, garantindo que todas as entidades principais possuam operações completas de banco de dados (CRUD) e uma interface padronizada.
-
-### ✅ O que foi entregue:
-* **Gestão de Agenda Escolar**: Sistema completo para criar e editar eventos, com suporte a campos como `hora_evento`, `local` e `publico_alvo` (Pais, Funcionários ou Geral).
-* **Controle de Estoque e Materiais**: Separação lógica entre **Produtos** (materiais físicos com controle de quantidade) e **Serviços** (registros de manutenção e reparos).
-* **Módulo de Fornecedores**: Cadastro e listagem de parceiros comerciais com CNPJ, e-mail e telefone.
-* **Padronização de UI/UX**: Todas as telas de cadastro e edição foram unificadas para o modelo "Card Centralizado" (Alfa 0.2).
-* **Integração de Banco de Dados**: Refatoração do script SQL para suportar todas as novas colunas e chaves estrangeiras.
-* **Validações no Front-End**: Validações com JavaScript nos formulários de login e cadastro (e-mail, senha, campos obrigatórios).
-* **Deploy em produção**: Sistema hospedado e acessível publicamente via Railway.
+> ⚠️ Credenciais apenas para ambiente de demonstração. Altere antes de uso em produção.
 
 ---
 
-## 📊 Dados de Teste (Pronto para Apresentação)
+## 🚀 Histórico de Versões
 
-O banco de dados já vem populado com exemplos reais para facilitar a demonstração das funcionalidades:
+### ✅ Alpha 0.4 — Arquitetura MVC Completa
+- Reestruturação completa para padrão MVC
+- Router centralizado com rotas absolutas
+- Correção de todos os redirects e links das views e controllers
+- CSS do chat integrado ao `style.css`
+- Páginas públicas (`index.php` e `sobre.html`) movidas para `public/`
+- Correção de caminhos de assets, CSS e session_start duplicado
 
-* **Usuários (Credenciais)**:
-  - **Administrador**: `admin@cei.com` | Senha: `123456`
-  - **Responsável**: `cliente@cei.com` | Senha: `123456`
-  - **Usuário**: `usuario@cei.com` | Senha: `U123456`
-* **Agenda**: Eventos pré-cadastrados como "Reunião de Pais" e "Festa Junina".
-* **Estoque**: Itens de exemplo como "Resma Papel A4" e "Kit de Artes".
-* **Serviços**: Registros de manutenção como "Pintura de Sala" e "Reparo de Ar Condicionado".
-* **Fornecedores**: Empresas cadastradas como "Distribuidora Escolar S.A." e "Manutenção Express".
+### ✅ Alpha 0.3 — CRUDs e Padronização
+- CRUD completo de Agenda, Produtos, Serviços, Fornecedores
+- Separação lógica entre Produtos e Serviços
+- Padronização de UI/UX com card centralizado
+- Validações JavaScript nos formulários
+- Deploy em produção no Railway
+
+### ✅ Alpha 0.2 — Base do Sistema
+- Autenticação com perfis (admin, usuario, cliente)
+- CRUD de usuários
+- Chat interno entre usuários
+- Dark Mode
+
+---
+
+## 📊 Dados de Teste
+
+O banco já vem populado com dados para demonstração:
+
+| Módulo | Exemplos |
+|--------|----------|
+| Usuários | Admin, Educador, Responsável |
+| Agenda | "Reunião de Pais", "Festa Junina" |
+| Estoque | "Resma Papel A4", "Kit de Artes" |
+| Serviços | "Pintura de Sala", "Reparo de Ar Condicionado" |
+| Fornecedores | "Distribuidora Escolar S.A.", "Manutenção Express" |
 
 ---
 
 ## 🛠️ Como usar o `tabelas.sql`
 
-O arquivo `tabelas.sql` na raiz do projeto contém toda a estrutura necessária (DDL) e os dados iniciais (DML) para o funcionamento imediato do sistema.
-
-1. Abra o seu gerenciador de banco de dados (ex: **phpMyAdmin**).
-2. Crie um novo banco de dados chamado `ceicontrol`.
-3. Clique na aba **Importar**.
-4. Selecione o arquivo `tabelas.sql` e clique em **Executar**.
-   * *O script irá criar automaticamente as 6 tabelas (usuarios, fornecedores, produtos, servicos, agenda, mensagens) e inserir os dados de teste.*
+1. Abra o **phpMyAdmin**
+2. Crie um banco chamado `ceicontrol`
+3. Importe o arquivo `tabelas.sql`
+4. O script cria automaticamente as tabelas: `usuarios`, `fornecedores`, `produtos`, `servicos`, `agenda`, `mensagens`
 
 ---
 
-## 💻 Como clonar e rodar o repositório
+## 💻 Como rodar localmente
 
-Siga os passos abaixo para configurar o ambiente local (XAMPP/WAMP):
+### Pré-requisitos
+- XAMPP ou WAMP (PHP 8.x + Apache + MySQL)
 
-1. **Clonagem via Terminal**:
-   Abra o terminal na sua pasta de servidores (ex: `C:/xampp/htdocs/`) e execute:
-   ```bash
-   git clone https://github.com/EduardoMartins-tech/CEIControl-Alpha-0.3.git
-   ```
+### Passo a passo
 
-2. **Acesso ao Sistema**:
-   Certifique-se de que o Apache e o MySQL estão ativos e acesse no seu navegador:
-   ```
-   http://localhost/CEIControl-Alpha-0.3/form_login.php
-   ```
+```bash
+# Clone na pasta do servidor
+cd C:/xampp/htdocs/
+git clone https://github.com/EduardoMartins-tech/CEIControl-Alpha-0.3.git
+```
 
-3. **Configuração de Banco**:
-   Edite o arquivo `database.php` com as suas credenciais locais:
-   ```php
-   $host = "localhost";
-   $user = "root";
-   $pass = "SUA_SENHA";
-   $db   = "ceicontrol";
-   ```
+Configure o `config/database.php`:
+```php
+$host = "localhost";
+$user = "root";
+$pass = "SUA_SENHA";
+$db   = "ceicontrol";
+```
+
+Acesse no navegador:
+```
+http://localhost/CEIControl-Alpha-0.3/
+```
+
+### Variáveis de ambiente no Railway
+
+| Variável | Descrição |
+|----------|-----------|
+| `DB_HOST` | Host do banco MySQL |
+| `DB_NAME` | Nome do banco |
+| `DB_USER` | Usuário do banco |
+| `DB_PASSWORD` | Senha do banco |
+
+---
+
+## 🗺️ Roadmap Futuro
+
+- [ ] Cadastro de alunos e turmas
+- [ ] Vinculação responsável → aluno → turma
+- [ ] Eventos filtrados por turma para responsáveis
+- [ ] Sistema de solicitação de materiais e serviços
+- [ ] Notificações internas com badge
+- [ ] Dashboard com dados reais (gráficos e contadores)
+- [ ] Controle de autoria nos eventos por educador
 
 ---
 
 <p align="center">Desenvolvido pela <b>JEMTech</b> para a FATEC Ferraz de Vasconcelos</p>
+<p align="center">Projeto Integrador — Programação Web — 2025/2026</p>
