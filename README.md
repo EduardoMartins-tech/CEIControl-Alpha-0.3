@@ -221,6 +221,32 @@ $pass = "SUA_SENHA";
 $db   = "ceicontrol";
 ```
 
+### Variáveis de ambiente no Railway
+
+| Variável | Descrição |
+|----------|-----------|
+| `DB_HOST` | Host do banco MySQL |
+| `DB_NAME` | Nome do banco |
+| `DB_USER` | Usuário do banco |
+| `DB_PASSWORD` | Senha do banco |
+
+---
+
+## 🗺️ Roadmap Futuro
+
+- [ ] Cadastro de alunos e turmas
+- [ ] Vinculação responsável → aluno → turma
+- [ ] Eventos filtrados por turma para responsáveis
+- [ ] Sistema de solicitação de materiais e serviços
+- [ ] Notificações internas com badge
+- [ ] Dashboard com dados reais (gráficos e contadores)
+- [ ] Controle de autoria nos eventos por educador
+
+---
+
+<p align="center">Desenvolvido pela <b>JEMTech</b> para a FATEC Ferraz de Vasconcelos</p>
+<p align="center">Projeto Integrador — Programação Web — 2025/2026</p>
+
 Acesse no navegador:
 ```
 http://localhost/CEIControl-Alpha-0.4/
