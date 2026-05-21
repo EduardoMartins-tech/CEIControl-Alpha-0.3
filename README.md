@@ -1,12 +1,21 @@
-## 📌 Sobre o Projeto
+## 👨‍💻 Equipe e Orientação
 
-[cite_start]O **CEIControl** é um sistema web desenvolvido como Projeto Integrador II para a Faculdade de Tecnologia de Ferraz de Vasconcelos [cite: 2, 14][cite_start], no Curso Superior de Análise e Desenvolvimento de Sistemas[cite: 3]. [cite_start]A plataforma foi criada para **modernizar, digitalizar e centralizar a gestão de Centros de Educação Infantil (CEIs) públicos**[cite: 18, 22].
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/EduardoMartins-tech">
+        <img src="https://github.com/EduardoMartins-tech.png" width="100px;" /><br>
+        <sub><b>Eduardo Ferreira Martins</b></sub> [cite: 4]
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/JVCod1ng">
+        <img src="https://github.com/JVCod1ng.png" width="100px;" /><br>
+        <sub><b>João Vitor Martins</b></sub> [cite: 5]
+      </a>
+    </td>
+  </tr>
+</table>
 
-> [cite_start]🏫 *“Cuidar das crianças começa com cuidar de quem as educa!”* [cite: 7]
-
-[cite_start]A proposta é mitigar a fragmentação administrativa reunindo em uma única plataforma[cite: 19, 93]:
-- [cite_start]👥 Gestão de usuários e controle de perfis de acesso[cite: 19, 21].
-- [cite_start]📦 Controle e gerenciamento de produtos e serviços[cite: 19].
-- [cite_start]🏢 Cadastro e acompanhamento de fornecedores[cite: 19].
-- [cite_start]📅 Agenda digital escolar compartilhada[cite: 19, 86].
-- [cite_start]💬 Canal de comunicação direta em tempo real entre coordenação/professores e responsáveis[cite: 19, 92].
+### 👨‍🏫 Orientação
+* **Prof. [cite_start]Francisco Douglas Lima Abreu**  [cite_start]— *Disciplina de Projeto Integrador II.*
