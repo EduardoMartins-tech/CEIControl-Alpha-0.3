@@ -188,3 +188,41 @@ O banco já vem populado com dados para demonstração:
 | Estoque | "Resma Papel A4", "Kit de Artes" |
 | Serviços | "Pintura de Sala", "Reparo de Ar Condicionado" |
 | Fornecedores | "Distribuidora Escolar S.A.", "Manutenção Express" |
+
+---
+
+## 🛠️ Como usar o `tabelas.sql`
+
+1. Abra o **phpMyAdmin**
+2. Crie um banco chamado `ceicontrol`
+3. Importe o arquivo `tabelas.sql`
+4. O script cria automaticamente as tabelas: `usuarios`, `fornecedores`, `produtos`, `servicos`, `agenda`, `mensagens`
+
+---
+
+## 💻 Como rodar localmente
+
+### Pré-requisitos
+- XAMPP ou WAMP (PHP 8.x + Apache + MySQL)
+
+### Passo a passo
+
+```bash
+# Clone na pasta do servidor
+cd C:/xampp/htdocs/
+git clone https://github.com/EduardoMartins-tech/CEIControl-Alpha-0.3.git
+```
+
+Configure o `config/database.php`:
+```php
+$host = "localhost";
+$user = "root";
+$pass = "SUA_SENHA";
+$db   = "ceicontrol";
+```
+
+Acesse no navegador:
+```
+http://localhost/CEIControl-Alpha-0.4/
+```
+
