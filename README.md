@@ -72,6 +72,8 @@ A proposta é centralizar em um único sistema:
 * **Prof. Jefferson Roberto de Lima**  — *Disciplina de Projeto Integrador III.*
 * **Prof. Francisco Douglas Lima Abreu** — *Disciplina de Projeto Integrador II & Programação WEB.*
 
+---
+
 ## 🏢 A Empresa: JEM Tech
 
 A **JEM Tech** é uma startup de impacto social focada no desenvolvimento de soluções digitais de gestão exclusivas para democratizar o acesso à tecnologia.
