@@ -150,3 +150,41 @@ O CEIControl não é apenas uma ferramenta técnica, mas também uma iniciativa 
 > ⚠️ Credenciais apenas para ambiente de demonstração. Altere antes de uso em produção.
 
 ---
+
+## 🚀 Histórico de Versões
+
+### ✅ Alpha 0.4 — Arquitetura MVC Completa
+- Atualização e Reformulação do READ.me
+- Reestruturação completa para padrão MVC
+- Router centralizado com rotas absolutas
+- Correção de todos os redirects e links das views e controllers
+- CSS do chat integrado ao `style.css`
+- Páginas públicas (`index.php` e `sobre.html`) movidas para `public/`
+- Correção de caminhos de assets, CSS e session_start duplicado
+
+### ✅ Alpha 0.3 — CRUDs e Padronização
+- CRUD completo de Agenda, Produtos, Serviços, Fornecedores
+- Separação lógica entre Produtos e Serviços
+- Padronização de UI/UX com card centralizado
+- Validações JavaScript nos formulários
+- Deploy em produção no Railway
+
+### ✅ Alpha 0.2 — Base do Sistema
+- Autenticação com perfis (admin, usuario, cliente)
+- CRUD de usuários
+- Chat interno entre usuários
+- Dark Mode
+
+---
+
+## 📊 Dados de Teste
+
+O banco já vem populado com dados para demonstração:
+
+| Módulo | Exemplos |
+|--------|----------|
+| Usuários | Admin, Educador, Responsável |
+| Agenda | "Reunião de Pais", "Festa Junina" |
+| Estoque | "Resma Papel A4", "Kit de Artes" |
+| Serviços | "Pintura de Sala", "Reparo de Ar Condicionado" |
+| Fornecedores | "Distribuidora Escolar S.A.", "Manutenção Express" |
