@@ -80,6 +80,23 @@ A **JEM Tech** é uma startup de impacto social focada no desenvolvimento de sol
 * **Visão:** Ser a principal referência nacional em sistemas de gestão pública, ampliando a digitalização da base do país.
 * **Valores:** Inovação para simplificar rotinas, segurança e criptografia de dados sensíveis, acessibilidade em plataformas gratuitas e intuitivas, e respeito ao meio ambiente através da redução do uso de papel.
 
+---
+
+## 🎯 Objetivos
+
+### 🔹 Objetivo Geral
+Criar uma plataforma gratuita, eficiente e acessível para a gestão de CEIs, promovendo **organização, comunicação e transparência**.
+
+### 🔹 Objetivos Específicos
+
+- 📊 Centralizar dados administrativos
+- 💬 Melhorar comunicação com responsáveis
+- 🔐 Garantir segurança com controle de acesso por perfil
+- ⚙️ Utilizar arquitetura MVC para escalabilidade
+- 🌍 Promover inclusão digital no setor público
+
+---
+
 ## 🌍 Alinhamento com os Objetivos de Desenvolvimento Sustentável (ODS)
 
 O CEIControl não é apenas uma ferramenta técnica, mas também uma iniciativa de impacto social alinhada com as metas globais da ONU para promover uma educação inclusiva e de qualidade:
@@ -88,3 +105,14 @@ O CEIControl não é apenas uma ferramenta técnica, mas também uma iniciativa 
 * **ODS 9 – Indústria, Inovação e Infraestrutura:** Promove a modernização e digitalização de processos governamentais legados.
 * **ODS 10 – Redução das Desigualdades:** Oferece uma solução robusta e 100% gratuita para reduzir a exclusão digital no ambiente escolar público.
 * **ODS 17 – Parcerias e Meios de Implementação:** Viabiliza a integração entre prefeituras, secretarias de educação e a comunidade escolar.
+
+* ## 🌟 Funcionalidades
+
+- ✅ CRUD completo — Usuários, Produtos, Serviços, Fornecedores, Eventos
+- 💬 Chat interno entre usuários do sistema
+- 📅 Agenda digital com controle de público-alvo
+- 🔐 Autenticação por perfil com hash BCrypt
+- 🌙 Modo escuro (Dark Mode)
+- 📱 Layout responsivo para mobile
+- ✔️ Validações com JavaScript no front-end
+
