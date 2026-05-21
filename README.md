@@ -21,6 +21,34 @@
 
 ---
 
+## 📌 Sobre o Projeto
+
+O **CEIControl** é uma plataforma web desenvolvida para **modernizar e simplificar a gestão de Centros de Educação Infantil (CEIs) públicos**.
+
+A proposta é centralizar em um único sistema:
+
+- 👥 Gestão de usuários e perfis de acesso
+- 📦 Controle de estoque e serviços
+- 🏢 Gestão de fornecedores
+- 📅 Agenda digital escolar
+- 💬 Comunicação interna entre usuários
+
+> 💡 Projeto desenvolvido pela **JEMTech**, focada em soluções digitais para o setor público de educação.
+
+---
+
+## 📎 Links do Projeto
+
+| Recurso | Link |
+|---------|------|
+| 🌐 Deploy Backend | [ceicontrol.up.railway.app](https://ceicontrol.up.railway.app) |
+| 🖥️ Deploy Frontend | [CEIControl Front](https://eduardomartins-tech.github.io/CEIControl-Front/) |
+| 📦 Repositório Backend | [GitHub - CEIControl Alpha 0.3](https://github.com/EduardoMartins-tech/CEIControl-Alpha-0.3) |
+| 🎨 Repositório Frontend | [GitHub - CEIControl Front](https://github.com/EduardoMartins-tech/CEIControl-Front) |
+| 🖌️ Protótipo Figma | [Visualizar no Figma](https://www.figma.com/design/Ik8DcPkOuDatNVvMvnUDYq/CCsite?node-id=0-1&p=f) |
+
+---
+
 ## 👨‍💻 Equipe e Orientação
 
 <table align="center">
