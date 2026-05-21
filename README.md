@@ -118,3 +118,35 @@ O CEIControl não é apenas uma ferramenta técnica, mas também uma iniciativa 
 - 📱 Layout responsivo para mobile
 - ✔️ Validações com JavaScript no front-end
 
+---
+
+## 🧰 Tecnologias
+
+<p align="center">
+
+| Tecnologia | Uso |
+|-----------|-----|
+| PHP 8.x | Back-end e arquitetura MVC |
+| MySQL | Banco de dados relacional |
+| HTML5 | Estrutura das views |
+| CSS3 | Estilo e responsividade |
+| JavaScript | Interatividade e validações |
+| Railway | Hospedagem e deploy |
+| Apache | Servidor web com mod_rewrite |
+| BCrypt | Hash seguro de senhas |
+
+</p>
+
+---
+
+## 🔐 Perfis de Acesso
+
+| Perfil | Descrição | E-mail | Senha |
+|--------|-----------|--------|-------|
+| **Admin** | Gestor Escolar — acesso total | admin@cei.com | 123456 |
+| **Usuario** | Educador — agenda e materiais | usuario@cei.com | 123456 |
+| **Cliente** | Responsável — agenda e chat | cliente@cei.com | 123456 |
+
+> ⚠️ Credenciais apenas para ambiente de demonstração. Altere antes de uso em produção.
+
+---
