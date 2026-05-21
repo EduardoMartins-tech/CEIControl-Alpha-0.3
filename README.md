@@ -139,6 +139,47 @@ O CEIControl não é apenas uma ferramenta técnica, mas também uma iniciativa 
 
 ---
 
+## 🏗️ Arquitetura MVC
+
+```
+CEIControl/
+├── config/
+│   └── database.php
+├── app/
+│   ├── models/
+│   │   ├── UsuarioModel.php
+│   │   ├── ProdutoModel.php
+│   │   ├── FornecedoresModel.php
+│   │   ├── EventoModel.php
+│   │   └── MensagemModel.php
+│   ├── controllers/
+│   │   ├── AuthController.php
+│   │   ├── UsuarioController.php
+│   │   ├── ProdutoController.php
+│   │   ├── FornecedorController.php
+│   │   └── EventoController.php
+│   └── views/
+│       ├── auth/
+│       ├── usuarios/
+│       ├── produtos/
+│       ├── fornecedores/
+│       ├── eventos/
+│       ├── comunicacao.php
+│       └── enviar_mensagens.php
+├── public/
+│   ├── index.php
+│   ├── sobre.html
+│   ├── style.css
+│   ├── mobile.css
+│   ├── script.js
+│   └── assets/
+├── sidebar.php
+├── router.php
+└── tabelas.sql
+```
+
+---
+
 ## 🔐 Perfis de Acesso
 
 | Perfil | Descrição | E-mail | Senha |
