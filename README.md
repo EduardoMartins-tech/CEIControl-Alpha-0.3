@@ -18,7 +18,8 @@
 </table>
 
 ### 👨‍🏫 Orientação
-* **Prof. Jefferson Roberto de Lima**  — *Disciplina de Projeto Integrador II.*
+* **Prof. Jefferson Roberto de Lima**  — *Disciplina de Projeto Integrador III.*
+* **Prof. Francisco Douglas Lima Abreu** — *Disciplina de Projeto Integrador II & Programação WEB.*
 
 ## 🏢 A Empresa: JEM Tech
 
