@@ -33,7 +33,7 @@ A proposta é centralizar em um único sistema:
 - 📅 Agenda digital escolar
 - 💬 Comunicação interna entre usuários
 
-> 💡 Projeto desenvolvido pela **JEMTech**, focada em soluções digitais para o setor público de educação.
+> 💡 Projeto desenvolvido pela **JEMTech**, focada em soluções digitais.
 
 ---
 
