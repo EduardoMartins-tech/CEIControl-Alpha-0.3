@@ -1,3 +1,26 @@
+# 🚀 CEIControl
+
+<p align="center">
+  <img src="public/assets/ceicontrol.png" height="120"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="public/assets/logo_jemtech.png" height="120"/>
+</p>
+
+<p align="center">
+  <b>Sistema de Gestão para Centros de Educação Infantil Públicos</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" />
+  <img src="https://img.shields.io/badge/version-0.4-blue" />
+  <img src="https://img.shields.io/badge/license-MIT-green" />
+  <img src="https://img.shields.io/badge/PHP-Backend-blueviolet" />
+  <img src="https://img.shields.io/badge/MySQL-Database-orange" />
+  <img src="https://img.shields.io/badge/MVC-Architecture-brightgreen" />
+</p>
+
+---
+
 ## 👨‍💻 Equipe e Orientação
 
 <table align="center">
