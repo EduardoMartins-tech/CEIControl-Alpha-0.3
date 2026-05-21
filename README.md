@@ -5,17 +5,17 @@
     <td align="center">
       <a href="https://github.com/EduardoMartins-tech">
         <img src="https://github.com/EduardoMartins-tech.png" width="100px;" /><br>
-        <sub><b>Eduardo Ferreira Martins</b></sub> [cite: 4]
+        <sub><b>Eduardo Ferreira Martins</b></sub> 
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/JVCod1ng">
         <img src="https://github.com/JVCod1ng.png" width="100px;" /><br>
-        <sub><b>João Vitor Martins</b></sub> [cite: 5]
+        <sub><b>João Vitor Martins</b></sub> 
       </a>
     </td>
   </tr>
 </table>
 
 ### 👨‍🏫 Orientação
-* **Prof. [cite_start]Francisco Douglas Lima Abreu**  [cite_start]— *Disciplina de Projeto Integrador II.*
+* **Prof. Jefferson Roberto de Lima**  — *Disciplina de Projeto Integrador II.*
